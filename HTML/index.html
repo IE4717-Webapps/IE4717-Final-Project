@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>MOVIES @ NTU</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="../CSS/index.css">
+	<script>
+		function openNav() {
+		  	document.getElementById("myCart").style.width = "400px";
+  			document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+		}
+		
+		function closeNav() {
+		  	document.getElementById("myCart").style.width = "0";
+			document.body.style.backgroundColor = "white";
+		}
+		</script>
+</head>
+
+<body>
+	<div id="wrapper">
+		<header>
+			<div class="topnav">
+			  <a href="../HTML/index.html" style="text-decoration:underline;">HOME</a>
+			  <a href="team.html">MOVIES</a>
+			  <a class="homebutton" href="../HTML/index.html"><strong>MOVIES @ NTU</strong></a>
+			  <a href="about.html">CINEMAS</a>
+			  <a href="booking_service.php">CONTACT</a>
+			  <div class="cart-icon" style="position:relative; right:-150px;">
+				<span onclick="openNav()"><img src="../Images/cart-icon.png" width="40px"></span>
+			  </div>
+			</div>
+
+			<div id="myCart" class="cartnav">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				<a href="#">About</a>
+			  </div>
+		  </header>
+
+		
+
+		<footer>
+			<i>Copyright &copy; 2014 JavaJam Coffee House</i><br>
+			<i><a href="mailto:june@yong.com">
+			june@yong.com</a></i>
+		</footer>
+
+	</div>
+</body>
+</html>
+
+

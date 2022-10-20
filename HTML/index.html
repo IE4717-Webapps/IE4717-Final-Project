@@ -4,17 +4,7 @@
 	<title>MOVIES @ NTU</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="../CSS/index.css">
-	<script>
-		function openNav() {
-		  	document.getElementById("myCart").style.width = "400px";
-  			document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
-		}
-		
-		function closeNav() {
-		  	document.getElementById("myCart").style.width = "0";
-			document.body.style.backgroundColor = "white";
-		}
-		</script>
+	<script src="../JS/index.js"></script>
 </head>
 
 <body>
@@ -22,10 +12,10 @@
 		<header>
 			<div class="topnav">
 			  <a href="../HTML/index.html" style="text-decoration:underline;">HOME</a>
-			  <a href="team.html">MOVIES</a>
+			  <a href="../HTML/movies.html">MOVIES</a>
 			  <a class="homebutton" href="../HTML/index.html"><strong>MOVIES @ NTU</strong></a>
-			  <a href="about.html">CINEMAS</a>
-			  <a href="booking_service.php">CONTACT</a>
+			  <a href="../HTML/cinemas.html">CINEMAS</a>
+			  <a href="../HTML/contact.html">CONTACT</a>
 			  <div class="cart-icon" style="position:relative; right:-150px;">
 				<span onclick="openNav()"><img src="../Images/cart-icon.png" width="40px"></span>
 			  </div>
@@ -34,18 +24,68 @@
 			<div id="myCart" class="cartnav">
 				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 				<a href="#">About</a>
-			  </div>
-		  </header>
+			</div>
+		</header>
 
-		
+		<div class="slideshow-container">
+			<div class="mySlides fade">
+			  <img src="../Images/Screenshot 2022-10-14 at 8.32.56 AM.png" style="width:100%">
+			</div>
+			
+			<div class="mySlides fade">
+			  <img src="../Images/Screenshot 2022-10-18 at 11.04.03 PM.png" style="width:100%">
+			</div>
+			
+			<div class="mySlides fade">
+			  <img src="../Images/ultimate schedule subcomm.png" style="width:100%">
+			</div>
+			
+			<a class="prev" onclick="plusSlides(-1)">❮</a>
+			<a class="next" onclick="plusSlides(1)">❯</a>
+			
+		</div>
+			<br>
+		<div style="text-align:center; padding-bottom: 50px;">
+			<span class="dot" onclick="currentSlide(1)"></span> 
+			<span class="dot" onclick="currentSlide(2)"></span> 
+			<span class="dot" onclick="currentSlide(3)"></span> 
+		</div>
 
 		<footer>
-			<i>Copyright &copy; 2014 JavaJam Coffee House</i><br>
-			<i><a href="mailto:june@yong.com">
-			june@yong.com</a></i>
+			<a href="mailto:june@bhar.com">june@bhar.com</a>
+			<p>Copyright &copy;2022<br>Movies @ NTU</p>
 		</footer>
 
 	</div>
+	<script>
+		// SLIDESHOW
+		let slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+		showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+		showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		let i;
+		let slides = document.getElementsByClassName("mySlides");
+		let dots = document.getElementsByClassName("dot");
+		if (n > slides.length) {slideIndex = 1}    
+		if (n < 1) {slideIndex = slides.length}
+		for (i = 0; i < slides.length; i++) {
+			slides[i].style.display = "none";  
+		}
+		for (i = 0; i < dots.length; i++) {
+			dots[i].className = dots[i].className.replace(" active", "");
+		}
+		slides[slideIndex-1].style.display = "block";  
+		dots[slideIndex-1].className += " active";
+		}
+	</script>
 </body>
 </html>
 

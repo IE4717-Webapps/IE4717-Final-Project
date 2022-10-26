@@ -4,7 +4,7 @@
 	<title>MOVIES @ NTU</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="../../CSS/movie-page.css">
-	<script src="../JS/index.js"></script>
+	<script src="../../JS/movie-page.js"></script>
 </head>
 
 <body>
@@ -25,11 +25,11 @@
 				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 				<a href="#">About</a>
 			</div>
-		</header>
+		</header> 
 
 		<section class="content">
 			<div class="poster">
-                <img src="../../Images/TopGunPoster.jpeg" style="height:auto; width:30vw; object-fit: cover;" alt="topgunposter">
+                <img src="../../Images/TopGunPoster.jpeg" style="height:auto; width:27vw; object-fit: cover;" alt="topgunposter">
             </div>
     
             <div class="details">
@@ -38,9 +38,9 @@
                 </div>
 				<div class="movie-details">
 					<h3>Details:</h3>
-					<table>
+					<table style="width:100%">
 						<tr>
-							<td>Running Time: 130 minutes</td>
+							<td style="width:40%">Running Time: 130 minutes</td>
 							<td>Cast: Tom Cruise, Jennifer Connelly, Miles Teller</td>
 						</tr>
 						<tr>
@@ -52,14 +52,37 @@
 							<td>Genre: Action, Drama</td>
 						</tr>
 					</table>
-				</div>
-				<div class="synopsis">
+
 					<h3>Synopsis:</h3>
 					<p style="inline-size: 600px;">After more than 30 years of service as one of the Navy's top aviators, Pete "Maverick" Mitchell is where he belongs, pushing the envelope as a courageous test pilot and dodging the advancement in rank that would ground him. Training a detachment of graduates for a special assignment, Maverick must confront the ghosts of his past and his deepest fears, culminating in a mission that demands the ultimate sacrifice from those who choose to fly it.</p>
 				</div>
             </div>
+
+			<div class="book-tickets">
+				<h2>BOOK TICKETS</h2>
+				<label>Select Location:</label>
+			</div>
+			
+			
+				
 			
 		</section>
+
+		<select id="myselection" onchange="mySelection()">
+			<option>Select Option</option>
+			<option value="One">One</option>
+			<option value="Two">Two</option>
+			<option value="Three">Three</option>
+		</select>
+		<div id="showOne" class="myDiv" style="border:1px solid red;">
+			You have selected option <strong>"One"</strong>.
+		</div>
+		<div id="showTwo" class="myDiv">
+			You have selected option <strong>"Two"</strong>.
+		</div>
+		<div id="showThree" class="myDiv">
+			You have selected option <strong>"Three"</strong>.
+		</div> 
 
 		<footer>
 			<a href="mailto:june@bhar.com">june@bhar.com</a>

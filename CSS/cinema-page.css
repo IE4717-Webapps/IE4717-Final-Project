@@ -19,6 +19,7 @@ body {
     justify-content:center;
     align-items:center;
     font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
     padding:15px;
     border-bottom: 1px white solid;
     padding-left: 90px;
@@ -89,48 +90,55 @@ body {
     padding: 20px;
   }
 
-/* MOVIE INFO */
-.content{
-  padding: 2%;
+/* BANNER */
+.banner{
+  background: url('../Images/showingnow.jpeg') no-repeat;
+  height: 240px;
+}
+
+.banner .banner-text{
+font-size: 20px;
+background-color: white;
+color: black;
+text-align: center;
+width: fit-content;
+}
+
+/* MOVIES */
+content{
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
-.details .title{
-  text-decoration: underline;
-  font-size: 1.5em;
-  margin-bottom: 30px;
-}
-.details .movie-details table{
-  margin-bottom: 60px;
-}
-
-.details .movie-details table td{
-  vertical-align: top;
+.movie-list{
+  margin-top: 20px;
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
-/* BOOK TICKETS */
-.book-tickets{
-  width: 50%;
-  border: 2px white solid;
-  margin-top: 50px;
+.movies{
   font-family: 'Montserrat', sans-serif;
+  width: 230px;
+  height: 406px;
   text-align: center;
+  margin: 20px 50px;
   justify-content: center;
 }
 
-.myDiv{
-	  display:none;
-    padding:10px;
-    margin-top:20px;
-}  
-
-#showTwo{
-    border:1px solid green;
+.img{
+  width: 200px;
+  height: 300px;
+  object-fit: cover;
+  padding: 10px;
+  border-radius: 3%;
 }
-#showThree{
-    border:1px solid blue;
+
+.movies a{
+  color: white;
+  text-decoration: none;
 }
 
 /* FOOTER */

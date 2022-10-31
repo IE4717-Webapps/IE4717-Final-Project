@@ -1,0 +1,33 @@
+/* topgun.css */
+#select-date{
+    margin: 10px; 
+    background-color:#0000; 
+    border: 2px solid white; 
+    padding: 5px; 
+}
+
+input[type='date']{
+    -webkit-align-items: center;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+
+}
+input[type='date']::-webkit-calendar-picker-indicator{
+    filter: invert(100%);
+}
+input[type='date']::-webkit-datetime-edit{
+    padding: 0 0 0 30px;
+}
+
+.showtimes{
+    padding: 15px;
+}
+
+.showtimes-shows-selection{
+    margin: 10px;
+    padding: 5px 10px;
+    border: 2px solid white;
+    color: white;
+    background-color: #0000;
+    font-family: "Montserrat", sans-serif;
+}

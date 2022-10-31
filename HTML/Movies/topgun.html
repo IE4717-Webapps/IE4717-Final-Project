@@ -4,7 +4,9 @@
 	<title>MOVIES @ NTU</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="../../CSS/movie-page.css">
+	<link rel="stylesheet" href="topgun.css"
 	<script src="../../JS/movie-page.js"></script>
+	
 </head>
 
 <body>
@@ -60,9 +62,41 @@
 
 			<div class="book-tickets">
 				<h2>BOOK TICKETS</h2>
-				<label>Select Location:</label>
+				<div class="showtimes">
+					<label for="select-date" >Select Date:</label>
+					<input type="date" id="select-date" min="" value="" style="">
+					<div class="showtimes-timings">
+						<h3>North</h3>
+						<input type="submit" value="11:30 AM" name="submit_1" class="showtimes-shows-selection">
+						<input type="submit" value="2:30 PM" name="submit_1" class="showtimes-shows-selection">
+						<input type="submit" value="6:30 PM" name="submit_1" class="showtimes-shows-selection">
+						<input type="submit" value="8:30 PM" name="submit_1" class="showtimes-shows-selection">
+					</div>
+					<div class="showtimes-timings">
+						<h3>South</h3>
+						<input type="submit" value="11:30 AM" name="submit_2" class="showtimes-shows-selection">
+						<input type="submit" value="2:30 PM" name="submit_2" class="showtimes-shows-selection">
+						<input type="submit" value="6:30 PM" name="submit_2" class="showtimes-shows-selection">
+						<input type="submit" value="8:30 PM" name="submit_2" class="showtimes-shows-selection">
+					</div>
+					<div class="showtimes-timings">
+						<h3>East</h3>
+						<input type="submit" value="11:30 AM" name="submit_3" class="showtimes-shows-selection">
+						<input type="submit" value="2:30 PM" name="submit_3" class="showtimes-shows-selection">
+						<input type="submit" value="6:30 PM" name="submit_3" class="showtimes-shows-selection">
+						<input type="submit" value="8:30 PM" name="submit_3" class="showtimes-shows-selection">
+					</div>
+					<div class="showtimes-timings">
+						<h3>West</h3>
+						<input type="submit" value="11:30 AM" name="submit_4" class="showtimes-shows-selection">
+						<input type="submit" value="2:30 PM" name="submit_4" class="showtimes-shows-selection">
+						<input type="submit" value="6:30 PM" name="submit_4" class="showtimes-shows-selection">
+						<input type="submit" value="8:30 PM" name="submit_4" class="showtimes-shows-selection">
+					</div>
+				</div>
+				
 			</div>
-			
+		
 			
 				
 			
@@ -91,6 +125,23 @@
 		</footer>
 
 	</div>
+	<script>
+		var date = new Date();
+		var day = date.getDate();
+		var month = date.getMonth() + 1;
+		var year = date.getFullYear();
+		if(day < 10){
+			day = "0" + day;
+		}
+		if(month < 10){
+			month = "0" + day;
+		}
+		var minDate = year + "-" + month + "-" + day;
+		console.log(minDate);
+		document.getElementById("select-date").setAttribute("min", minDate);
+		document.getElementById("select-date").setAttribute("value", minDate);
+		
+	</script>
 </body>
 </html>
 

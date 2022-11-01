@@ -19,3 +19,12 @@ function BackToTop() {
 }
 
 bttop.addEventListener("click", scrollToTop)
+
+// FILTER BY GENRE
+function searchFilter() {
+    var element = document.getElementById("url");
+    element.value = language;
+    element.innerHTML = language;
+   }
+
+   

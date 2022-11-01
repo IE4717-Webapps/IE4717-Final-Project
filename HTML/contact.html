@@ -3,7 +3,7 @@
 <head>
 	<title>MOVIES @ NTU</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="../CSS/movies.css">
+	<link rel="stylesheet" href="../CSS/contact.css">
 	<script src="../JS/index.js"></script>
 </head>
 
@@ -47,12 +47,39 @@
 		
 		<div class="banner">
 			<div class="banner-text">
-			  <h1>SHOWING NOW</h1>
+			  <h1>ABOUT MOVIES @ NTU</h1>
 			</div>
 		</div>
 
 		<section class="content">
-			
+			<div class="aboutus">
+				<h4 style="text-decoration:underline;">About MOVIES @ NTU</h3>
+				<p style="inline-size: 450px;">Founded in 2019, MOVIES @ NTU is the leading movie theatre in NTU, offering the widest variety of new and upcoming movie releases with varied cinematic experiences.<br><br>Every week, hundreds of students come together to watch the latest films, engage in deep discussions, and bond over their love for films.</p>
+			</div>
+
+			<div class="contactus">
+				<h4 style="text-decoration:underline;">Contact Us</h3>
+				<p>Something on your mind?<br>Let us know and we will do our best to assist you!</p>
+				<form id="contactForm" name="checkoutForm" action="contact-confirmation.php" method="post">
+					<table border="0">
+						<tr style="height:40px;">
+						  <td width="150">*Full Name</td>
+						  <td width="300"><input type="text" name="name" id="name" placeholder="Enter name" onblur="myName()" required></td>
+						</tr>
+						<tr style="height:40px;">
+						  <td>*E-mail:</td>
+						  <td><input type="email" name="email" id="email" placeholder="Enter Email" onblur="myEmail()" required></td>
+						</tr>
+						<tr style="height:40px;">
+						  <td>*Query:</td>
+							<td><textarea name="experience" id="experience" rows="5" cols="40" placeholder="Let us know what's on your mind!" required></textarea></td>
+						</tr>
+						<tr>
+						  <td colspan="2" align="center" style="height:120px;"><input type="submit" id="submit"value="Submit"></td>
+						</tr>
+					</table>
+				</form>
+			</div>
 		</section>
 
 		<footer>

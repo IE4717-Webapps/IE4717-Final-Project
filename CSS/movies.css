@@ -146,12 +146,13 @@ input[type=number]::-webkit-inner-spin-button {
 .banner{
   background: url('../Images//showingnow.jpg') no-repeat;
   height: 240px;
+  display: flex;
 }
 
 .banner-text{
 font-size: 20px;
-background-color: white;
-color: black;
+color: white;
+text-shadow: 5px 5px #101010;
 margin: auto;
 width: fit-content;
 }

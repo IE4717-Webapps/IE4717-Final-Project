@@ -4,7 +4,9 @@
 	<title>MOVIES @ NTU</title>
 	<meta charset="utf-8">
 	<link rel="stylesheet" href="../../CSS/movie-page.css">
-	<script src="../../JS/movie-page.js"></script>
+	<link rel="stylesheet" href="topgun.css">
+	<!-- <script src="../../JS/movie-page.js"></script> -->
+	
 	
 </head>
 
@@ -58,44 +60,56 @@
 					<p style="inline-size: 600px;">After more than 30 years of service as one of the Navy's top aviators, Pete "Maverick" Mitchell is where he belongs, pushing the envelope as a courageous test pilot and dodging the advancement in rank that would ground him. Training a detachment of graduates for a special assignment, Maverick must confront the ghosts of his past and his deepest fears, culminating in a mission that demands the ultimate sacrifice from those who choose to fly it.</p>
 				</div>
             </div>
-
-			<div class="book-tickets">
-				<h2>BOOK TICKETS</h2>
-				<div class="showtimes">
-					<label for="select-date" >Select Date:</label>
-					<input type="date" id="select-date" min="" value="">
-					<div class="showtimes-timings">
-						<h3>North</h3>
-						<input type="submit" value="11:30 AM" name="submit_1" class="showtimes-shows-selection">
-						<input type="submit" value="2:30 PM" name="submit_1" class="showtimes-shows-selection">
-						<input type="submit" value="6:30 PM" name="submit_1" class="showtimes-shows-selection">
-						<input type="submit" value="8:30 PM" name="submit_1" class="showtimes-shows-selection">
+			
+				<div class="book-tickets">
+					<form
+						action="get-seats.php"
+						name="form_1"
+						class="showtimes-shows-form"
+						method="post"
+					>
+					<h2>BOOK TICKETS</h2>
+					<div class="showtimes">
+						<label for="select-date" >Select Date:</label>
+						<input type="date" id="select-date" min="" value="">
+						<div class="showtimes-timings">
+							<h3>North</h3>
+							<input type="submit" value="11:30 AM" name="submit_1" class="showtimes-shows-selection">
+							<input type="submit" value="2:30 PM" name="submit_1" class="showtimes-shows-selection">
+							<input type="submit" value="6:30 PM" name="submit_1" class="showtimes-shows-selection">
+							<input type="submit" value="8:30 PM" name="submit_1" class="showtimes-shows-selection">
+						</div>
+						<div class="showtimes-timings">
+							<h3>South</h3>
+							<input type="submit" value="11:30 AM" name="submit_2" class="showtimes-shows-selection">
+							<input type="submit" value="2:30 PM" name="submit_2" class="showtimes-shows-selection">
+							<input type="submit" value="6:30 PM" name="submit_2" class="showtimes-shows-selection">
+							<input type="submit" value="8:30 PM" name="submit_2" class="showtimes-shows-selection">
+						</div>
+						<div class="showtimes-timings">
+							<h3>East</h3>
+							<input type="submit" value="11:30 AM" name="submit_3" class="showtimes-shows-selection">
+							<input type="submit" value="2:30 PM" name="submit_3" class="showtimes-shows-selection">
+							<input type="submit" value="6:30 PM" name="submit_3" class="showtimes-shows-selection">
+							<input type="submit" value="8:30 PM" name="submit_3" class="showtimes-shows-selection">
+						</div>
+						<div class="showtimes-timings">
+							<h3>West</h3>
+							<input type="submit" value="11:30 AM" name="submit_4" class="showtimes-shows-selection">
+							<input type="submit" value="2:30 PM" name="submit_4" class="showtimes-shows-selection">
+							<input type="submit" value="6:30 PM" name="submit_4" class="showtimes-shows-selection">
+							<input type="submit" value="8:30 PM" name="submit_4" class="showtimes-shows-selection">
+						</div>
+						<input type="text" name="movie" value="Top Gun: Maverick" hidden>
+						<input type="text" name="location_1" value="North" hidden>
+						<input type="text" name="location_2" value="South" hidden>
+						<input type="text" name="location_3" value="East" hidden>
+						<input type="text" name="location_4" value="West" hidden>
+						<input type="text" name="date" value="" id="pickDate" hidden>
 					</div>
-					<div class="showtimes-timings">
-						<h3>South</h3>
-						<input type="submit" value="11:30 AM" name="submit_2" class="showtimes-shows-selection">
-						<input type="submit" value="2:30 PM" name="submit_2" class="showtimes-shows-selection">
-						<input type="submit" value="6:30 PM" name="submit_2" class="showtimes-shows-selection">
-						<input type="submit" value="8:30 PM" name="submit_2" class="showtimes-shows-selection">
-					</div>
-					<div class="showtimes-timings">
-						<h3>East</h3>
-						<input type="submit" value="11:30 AM" name="submit_3" class="showtimes-shows-selection">
-						<input type="submit" value="2:30 PM" name="submit_3" class="showtimes-shows-selection">
-						<input type="submit" value="6:30 PM" name="submit_3" class="showtimes-shows-selection">
-						<input type="submit" value="8:30 PM" name="submit_3" class="showtimes-shows-selection">
-					</div>
-					<div class="showtimes-timings">
-						<h3>West</h3>
-						<input type="submit" value="11:30 AM" name="submit_4" class="showtimes-shows-selection">
-						<input type="submit" value="2:30 PM" name="submit_4" class="showtimes-shows-selection">
-						<input type="submit" value="6:30 PM" name="submit_4" class="showtimes-shows-selection">
-						<input type="submit" value="8:30 PM" name="submit_4" class="showtimes-shows-selection">
-					</div>
+					</form>
 				</div>
-				
-			</div>
-		
+			
 			
 				
 			
@@ -123,6 +137,12 @@
 		console.log(minDate);
 		document.getElementById("select-date").setAttribute("min", minDate);
 		document.getElementById("select-date").setAttribute("value", minDate);
+		newDate = document.getElementById("select-date");
+		newDate.addEventListener('change', function(){
+			console.log(newDate.value);
+			document.getElementById('pickDate').setAttribute("value", newDate.value);
+		})	
+
 		
 	</script>
 </body>

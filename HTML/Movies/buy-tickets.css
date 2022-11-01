@@ -1,0 +1,252 @@
+/* buy-tickets.css */
+.ticket-container {
+    max-width: 95%;
+    padding: 0 20px;
+    margin: 0 auto;
+  }
+  
+  .ticket-content {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+  }
+  
+  .ticket-steps {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    color: white;
+  }
+  
+  .ticket-steps-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+  }
+  
+  .ticket-step-number {
+    width: 35px;
+    height: 35px;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    color: white;
+    border-radius: 50%;
+    border: 2px solid white;
+  }
+  
+  .current {
+    border: 2px rgb(201, 157, 201);
+    border-radius: 10px;
+    padding: 10px;
+  }
+  
+  .ticket-seat-selection {
+    display: grid;
+    grid-template-columns: 25% 75%;
+    padding: 20px 0;
+  }
+  
+  .ticket-poster-container {
+    margin-right: 20px;
+  }
+  
+  .ticket-poster-container img {
+    width: 100%;
+  }
+  
+  .ticket-seat-selection-content {
+    display: flex;
+    flex-direction: column;
+    color: white;
+  }
+  
+  .ticket-instruction {
+    padding: 0 40px;
+  }
+  
+  .ticket-seating-plan {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .ticket-seat {
+    background-color: white;
+    height: 20px;
+    width: 22px;
+    margin: 3px;
+    transition: 0.1s ease-in-out;
+  }
+  
+  .ticket-seat-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .ticket-seat.occupied {
+    background-color: hsla(0, 76%, 50%, 0.603);
+  }
+  
+  .ticket-seat.selected {
+    background-color: rgb(23, 88, 69);
+  }
+  
+  .ticket-seat.not-available {
+    background-color: gray;
+  }
+  
+  .ticket-seat:nth-of-type(3) {
+    margin-right: 18px;
+  }
+  
+  .ticket-seat:nth-last-of-type(3) {
+    margin-left: 18px;
+  }
+  
+  .ticket-seat:not(.occupied):not(.not-available):hover {
+    cursor: pointer;
+    scale: 1.2;
+    background-color: rgb(23, 88, 69);
+  }
+  
+  .ticket-showcase .ticket-seat:not(.occupied):not(.not-available):hover {
+    cursor: default;
+    scale: 1;
+  }
+  
+  .ticket-seat-number,
+  .ticket-seat-letter {
+    display: block;
+    height: 20px;
+    width: 22px;
+    margin: 3px;
+    text-align: center;
+  }
+  
+  .ticket-seat-number:nth-of-type(2) {
+    margin-right: 18px;
+  }
+  
+  .ticket-seat-number:nth-last-of-type(2) {
+    margin-left: 18px;
+  }
+  
+  .ticket-showcase {
+    padding: 30px 10px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .ticket-showcase li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+  }
+  
+  .ticket-showcase li p {
+    margin-left: 5px;
+  }
+  
+  .ticket-seating-plan-container {
+    padding: 20px 10px;
+    perspective: 1000px;
+    margin-bottom: 30px;
+  }
+  
+  .ticket-screen {
+    background-color: white;
+    height: 70px;
+    width: 100%;
+    margin: 15px 0;
+    transform: rotateX(-45deg);
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.75);
+  }
+  
+  .ticket-seat-info {
+    padding: 20px 0;
+  }
+  
+  .ticket-details-box {
+    margin: 10px 40px;
+    padding: 20px;
+    border: 1px solid mediumaquamarine;
+  }
+  
+  .ticket-details-text {
+    padding: 0 0 20px;
+  }
+  
+  .ticket-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .ticket-details-first-row,
+  .ticket-details-second-row {
+    display: grid;
+    grid-template-columns: 25% 75%;
+  }
+  
+  .ticket-total {
+    padding: 10px 40px;
+  }
+  
+  .ticket-customer-info-heading {
+    padding: 20px 40px;
+  }
+  
+  .ticket-customer-info {
+    width: 40%;
+    padding: 10px 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .customer-mobileno {
+    margin: 20px 0;
+  }
+  
+  .ticket-customer-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .payment-button {
+    width: 15%;
+    border: none;
+    outline: none;
+    margin: 10px auto;
+    font-family: "Montserrat";
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: green;
+    cursor: pointer;
+  }
+  
+  .information {
+    border: none;
+    background: none;
+    font-size: 15px;
+    font-family: "Montserrat";
+    /* text-align: center; */
+    color: white;
+  }
+  
+  .center {
+    text-align: center;
+  }
+  
+  .ticket-underline {
+    text-decoration: underline;
+    color: pink;
+    font-weight: bold;
+  }

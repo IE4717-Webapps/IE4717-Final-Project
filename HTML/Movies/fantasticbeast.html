@@ -78,6 +78,12 @@
             </div>
 
 			<div class="book-tickets">
+				<form
+					action="get-seats.php"
+					name="form_1"
+					class="showtimes-shows-form"
+					method="post"
+				>
 				<h2>BOOK TICKETS</h2>
 				<div class="showtimes">
 					<label for="select-date" >Select Date:</label>
@@ -110,40 +116,51 @@
 						<input type="submit" value="6:30 PM" name="submit_4" class="showtimes-shows-selection">
 						<input type="submit" value="8:30 PM" name="submit_4" class="showtimes-shows-selection">
 					</div>
+					<input type="text" name="movie" value="Fantastic Beasts: The Secrets Of Dumbledore" hidden>
+					<input type="text" name="location_1" value="North" hidden>
+					<input type="text" name="location_2" value="South" hidden>
+					<input type="text" name="location_3" value="East" hidden>
+					<input type="text" name="location_4" value="West" hidden>
+					<input type="text" name="date" value="" id="pickDate" hidden>
 				</div>
-				
+				</form>
 			</div>
 		
-			
-				
-			
-		</section>
-
-		<footer>
-			<a href="mailto:june@bhar.com">june@bhar.com</a>
-			<p>Movies @ NTU &copy; 2022</p>
-			<button onclick="BackToTop()" id="bttop">Back to top</button>
-		</footer>
-
-	</div>
-	<script>
-		var date = new Date();
-		var day = date.getDate();
-		var month = date.getMonth() + 1;
-		var year = date.getFullYear();
-		if(day < 10){
-			day = "0" + day;
-		}
-		if(month < 10){
-			month = "0" + day;
-		}
-		var minDate = year + "-" + month + "-" + day;
-		console.log(minDate);
-		document.getElementById("select-date").setAttribute("min", minDate);
-		document.getElementById("select-date").setAttribute("value", minDate);
 		
-	</script>
+			
+		
+	</section>
+
+	<footer>
+		<a href="mailto:june@bhar.com">june@bhar.com</a>
+		<p>Movies @ NTU &copy; 2022</p>
+		<button onclick="BackToTop()" id="bttop">Back to top</button>
+	</footer>
+
+</div>
+<script>
+	var date = new Date();
+	var day = date.getDate();
+	var month = date.getMonth() + 1;
+	var year = date.getFullYear();
+	if(day < 10){
+		day = "0" + day;
+	}
+	if(month < 10){
+		month = "0" + day;
+	}
+	var minDate = year + "-" + month + "-" + day;
+	console.log(minDate);
+	document.getElementById("select-date").setAttribute("min", minDate);
+	document.getElementById("select-date").setAttribute("value", minDate);
+	newDate = document.getElementById("select-date");
+	newDate.addEventListener('change', function(){
+		console.log(newDate.value);
+		document.getElementById('pickDate').setAttribute("value", newDate.value);
+	})	
+
+	
+</script>
 </body>
 </html>
-
 

@@ -46,32 +46,32 @@ function fetchData() {
     case "Top Gun: Maverick":
       moviePoster.src = "../../Images/TopGunPoster.jpeg";
       break;
-    case "":
+    case "The Worst Person In The World":
       moviePoster.src =
-        "../movie images & videos/Black Panther/Black Panther.jpeg ";
+        "../../Images/WorstPersonPoster.jpg ";
       break;
-    case "Doctor Strange in the Multiverse of Madness":
+    case "Licorice Pizza":
       moviePoster.src =
-        "../movie images & videos/Doctor Strange/Doctor Strange in the Multiverse of Madness.jpeg ";
+        "../../Images/LicoricePoster.jpg";
       break;
-    case "Eternals":
-      moviePoster.src = "../movie images & videos/Eternals/Eternals.jpeg ";
+    case "Turning Red":
+      moviePoster.src = "../../Images/TurningRed.jpeg";
       break;
-    case "Guardians of the Galaxy":
+    case "Everything Everywhere All At Once":
       moviePoster.src =
-        "../movie images & videos/Guardians of the Galaxy/Guardians of the Galaxy.jpeg ";
+        "../../Images/EEAAOPoster.jpg";
       break;
-    case "Shang-Chi":
+    case "Doctor Strange In The Multiverse Of Madness":
       moviePoster.src =
-        "../movie images & videos/Shang Chi/Shang-Chi and The Legend of The Ten Rings.jpeg ";
+        "../../Images/DoctorStrangePoster.jpg";
       break;
-    case "Spider-Man: No Way Home":
+    case "Fantastic Beasts: The Secrets Of Dumbledore":
       moviePoster.src =
-        "../movie images & videos/Spider-man/Spider-Man- No Way Home.jpeg ";
+        "../../Images/FantasticBeastPoster.jpg";
       break;
-    case "Thor: Love and Thunder":
+    case "Decision To Leave":
       moviePoster.src =
-        "../movie images & videos/Thor/Thor- Love and Thunder poster.jpeg ";
+        "../../Images/DecisionPoster.jpg";
       break;
   }
 }

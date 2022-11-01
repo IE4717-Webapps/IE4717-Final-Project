@@ -90,7 +90,7 @@
   }
   
   .ticket-seat.occupied {
-    background-color: hsla(0, 76%, 50%, 0.603);
+    background-color: hsla(0, 85%, 33%, 0.603);
   }
   
   .ticket-seat.selected {

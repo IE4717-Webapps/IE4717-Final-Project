@@ -332,14 +332,10 @@ if ($num_results > 0) {
             seatsContainer.forEach((seat) => {
             splitSelectedSeats.forEach((data) => {
                 if (data == seat.dataset.value) {
-                seat.classList.add('occupied');
+                seat.classList.toggle('occupied');
                 }
             })
             })
-
-            const movie = document.getElementById("movie-name");
-            movie.addEventListener("input", resizeInput);
-            resizeInput.call(movie);
         </script>
     </body>
 </html>

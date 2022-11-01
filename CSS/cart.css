@@ -11,11 +11,6 @@ body {
     margin: auto;
 }
 
-.content{
-  display: flex;
-  flex-direction: row;
-}
-
 /* NAV BAR */
 .topnav {
     display:grid;
@@ -53,7 +48,6 @@ body {
  .topnav .homebutton a:hover{
     text-decoration: none;
  }
-
 
  /* CART */
 .cartnav {
@@ -95,28 +89,41 @@ body {
   }
 
 /* TITLE */
-.title{
-  width: 85%;
-  justify-content: center;
+.content{
+  margin: auto;
+  margin-top: 30px;
+  width: 80%;
 }
 
 /* FOOTER */
-  footer{
-   position: fixed;
-   bottom: 0;
-   width: 100%;
-   text-align: center;
-   padding: 25px;
-   background-color: #101010;
-   color: white;
-   border-top: 1px white solid;
- }
+ footer{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;  
+  padding: 25px;
+  background-color: #101010;
+  color: white;
+  border-top: 1px white solid;
+}
 
- footer a{
-   color: white;
-   text-decoration: none;
- }
-  
+footer a{
+ color: white;
+ text-decoration: none;
+}
+
+#bttop{
+background-color: #101010;
+font-family: 'Montserrat', sans-serif;
+font-size: 16px;
+color: white;
+margin: 10px;
+border-style: none;
+}
+
 
 
 

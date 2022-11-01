@@ -32,45 +32,31 @@
 				<h1>CHECK OUT</h1>
 				<hr>
 			</div>
+
+			<div class="booking-details">
+				<h4 style="text-decoration:underline;">Booking Details</h3>
+
+			</div>
+			<div class="contact-details">
+				<h4 style="text-decoration:underline;">Contact Details</h3>
+				<form id="contactform" action="contact-details.php" method="post">
+					Full Name: <input type="text" name="name"><br>
+					E-mail: <input type="text" name="email"><br>
+					Mobile Number: <input type="text" name="email"><br>
+					<input type="submit">
+				</form>
+			</div>
 	
 		</section>
 		
 		
 		<footer>
 			<a href="mailto:june@bhar.com">june@bhar.com</a>
-			<p>Copyright &copy;2022<br>Movies @ NTU</p>
+			<p>Movies @ NTU &copy; 2022</p>
+			<button onclick="BackToTop()" id="bttop">Back to top</button>
 		</footer>
 
 	</div>
-	<script>
-		// SLIDESHOW
-		let slideIndex = 1;
-		showSlides(slideIndex);
-
-		function plusSlides(n) {
-		showSlides(slideIndex += n);
-		}
-
-		function currentSlide(n) {
-		showSlides(slideIndex = n);
-		}
-
-		function showSlides(n) {
-		let i;
-		let slides = document.getElementsByClassName("mySlides");
-		let dots = document.getElementsByClassName("dot");
-		if (n > slides.length) {slideIndex = 1}    
-		if (n < 1) {slideIndex = slides.length}
-		for (i = 0; i < slides.length; i++) {
-			slides[i].style.display = "none";  
-		}
-		for (i = 0; i < dots.length; i++) {
-			dots[i].className = dots[i].className.replace(" active", "");
-		}
-		slides[slideIndex-1].style.display = "block";  
-		dots[slideIndex-1].className += " active";
-		}
-	</script>
 </body>
 </html>
 

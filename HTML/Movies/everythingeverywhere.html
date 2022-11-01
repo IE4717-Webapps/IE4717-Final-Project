@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>MOVIES @ NTU</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="../../CSS/movie-page.css">
+	<script src="../../JS/movie-page.js"></script>
+	
+</head>
+
+<body>
+	<div id="wrapper">
+		<header>
+			<div class="topnav">
+			  <a href="../../HTML/index.html">HOME</a>
+			  <a href="../../HTML/movies.html" style="text-decoration:underline;">MOVIES</a>
+			  <a class="homebutton" href="../../HTML/index.html"><strong>MOVIES @ NTU</strong></a>
+			  <a href="../../HTML/cinemas.html">CINEMAS</a>
+			  <a href="../../HTML/contact.html">CONTACT</a>
+			  <div class="cart-icon" style="position:relative; right:-150px;">
+				<span onclick="openNav()"><img src="../../Images/cart-icon.png" width="40px"></span>
+			  </div>
+			</div>
+
+			<div id="myCart" class="cartnav">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				<div class="cart-content">
+					<h2 style="margin-left:10px;">MY CART</h2>
+					<hr>
+					<div class="item">
+						<table id="cart-item">
+							<tr>
+								<td>Top Gun: Maverick</td>
+							</tr>
+							<tr>
+								<td>3 Nov, 2.30pm</td>
+							</tr>
+							<tr>
+								<td><input type="number" id="number" value="0" min="1" max="5"/></td>
+							</tr>
+						</table>
+						<hr width="80%">
+					</div>
+				</div>
+				<a href="../HTML/cart.html"><input type="submit" value="Checkout now" name="submit_1" class="checkout"></a>
+			</div>
+		</header> 
+
+		<section class="content">
+			<div class="poster">
+                <img src="../../Images/EEAAOPoster.jpg" style="height:auto; width:27vw; object-fit: cover;" alt="licoricepizza">
+            </div>
+    
+            <div class="details">
+                <div class="title">
+                  <h1>Everything Everywhere All At Once</h1>
+                </div>
+				<div class="movie-details">
+					<h3>Details:</h3>
+					<table style="width:100%; width:600px;">
+						<tr>
+							<td style="width:50%">Running Time: 139 minutes</td>
+							<td>Cast: Michelle Yeoh, Stephanie Hsu, Jamie Lee Curtis</td>
+						</tr>
+						<tr>
+							<td>Release Date: 25 March 2021</td>
+							<td>Director: Dan Kwan, Daniel Scheinert</td>
+						</tr>
+						<tr>
+							<td>Language: English, Mandarin, Cantonese</td>
+							<td>Genre: Action, Adventure Comedy</td>
+						</tr>
+					</table>
+
+					<h3>Synopsis:</h3>
+					<p style="inline-size: 600px;">A Chinese immigrant gets unwillingly embroiled in an epic adventure where she must connect different versions of herself in the parallel universe to stop someone who intends to harm the multiverse.</p>
+				</div>
+            </div>
+
+			<div class="book-tickets">
+				<h2>BOOK TICKETS</h2>
+				<div class="showtimes">
+					<label for="select-date" >Select Date:</label>
+					<input type="date" id="select-date" min="" value="">
+					<div class="showtimes-timings">
+						<h3>North</h3>
+						<input type="submit" value="11:30 AM" name="submit_1" class="showtimes-shows-selection">
+						<input type="submit" value="2:30 PM" name="submit_1" class="showtimes-shows-selection">
+						<input type="submit" value="6:30 PM" name="submit_1" class="showtimes-shows-selection">
+						<input type="submit" value="8:30 PM" name="submit_1" class="showtimes-shows-selection">
+					</div>
+					<div class="showtimes-timings">
+						<h3>South</h3>
+						<input type="submit" value="11:30 AM" name="submit_2" class="showtimes-shows-selection">
+						<input type="submit" value="2:30 PM" name="submit_2" class="showtimes-shows-selection">
+						<input type="submit" value="6:30 PM" name="submit_2" class="showtimes-shows-selection">
+						<input type="submit" value="8:30 PM" name="submit_2" class="showtimes-shows-selection">
+					</div>
+					<div class="showtimes-timings">
+						<h3>East</h3>
+						<input type="submit" value="11:30 AM" name="submit_3" class="showtimes-shows-selection">
+						<input type="submit" value="2:30 PM" name="submit_3" class="showtimes-shows-selection">
+						<input type="submit" value="6:30 PM" name="submit_3" class="showtimes-shows-selection">
+						<input type="submit" value="8:30 PM" name="submit_3" class="showtimes-shows-selection">
+					</div>
+					<div class="showtimes-timings">
+						<h3>West</h3>
+						<input type="submit" value="11:30 AM" name="submit_4" class="showtimes-shows-selection">
+						<input type="submit" value="2:30 PM" name="submit_4" class="showtimes-shows-selection">
+						<input type="submit" value="6:30 PM" name="submit_4" class="showtimes-shows-selection">
+						<input type="submit" value="8:30 PM" name="submit_4" class="showtimes-shows-selection">
+					</div>
+				</div>
+				
+			</div>
+		
+			
+				
+			
+		</section>
+
+		<footer>
+			<a href="mailto:june@bhar.com">june@bhar.com</a>
+			<p>Movies @ NTU &copy; 2022</p>
+			<button onclick="BackToTop()" id="bttop">Back to top</button>
+		</footer>
+
+	</div>
+	<script>
+		var date = new Date();
+		var day = date.getDate();
+		var month = date.getMonth() + 1;
+		var year = date.getFullYear();
+		if(day < 10){
+			day = "0" + day;
+		}
+		if(month < 10){
+			month = "0" + day;
+		}
+		var minDate = year + "-" + month + "-" + day;
+		console.log(minDate);
+		document.getElementById("select-date").setAttribute("min", minDate);
+		document.getElementById("select-date").setAttribute("value", minDate);
+		
+	</script>
+</body>
+</html>
+
+

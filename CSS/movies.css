@@ -19,7 +19,6 @@ body {
     justify-content:center;
     align-items:center;
     font-family: 'Montserrat', sans-serif;
-    font-weight: bold;
     padding:15px;
     border-bottom: 1px white solid;
     padding-left: 90px;
@@ -96,12 +95,21 @@ body {
   height: 240px;
 }
 
-.banner .banner-text{
+.banner-text{
 font-size: 20px;
 background-color: white;
 color: black;
-text-align: center;
+margin: auto;
 width: fit-content;
+}
+
+/*FILTER*/
+.filter{
+  margin-top: 30px;
+  margin-left: 120px;
+  background-color: #101010;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
 }
 
 /* MOVIES */

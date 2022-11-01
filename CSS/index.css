@@ -144,7 +144,7 @@ border: 1px solid white;
 
 /* SLIDESHOW */
 .mySlides {
-   display: none
+   display: none;
 }
 
 img {
@@ -152,7 +152,7 @@ img {
 }
 
 .slideshow-container {
-   max-width: 1000px;
+   width: 90%;
    position: relative;
    margin: auto;
    padding-top: 50px;
@@ -165,36 +165,52 @@ img {
    top: 50%;
    width: auto;
    padding: 16px;
-   margin-top: -22px;
    color: white;
    font-weight: bold;
    font-size: 18px;
    transition: 0.6s ease;
    border-radius: 0 3px 3px 0;
    user-select: none;
+   margin-left: -50px;
  }
  
  /* Position the "next button" to the right */
  .next {
-   right: 0;
+   right: -50px;
    border-radius: 3px 0 0 3px;
- }
- 
- /* On hover, add a black background color with a little bit see-through */
- .prev:hover, .next:hover {
-   background-color: rgba(0,0,0,0.8);
  }
  
  /* Caption text */
  .text {
-   color: #f2f2f2;
-   font-size: 15px;
-   padding: 8px 12px;
+   color: white;
+   text-align: right;
    position: absolute;
-   bottom: 8px;
-   width: 100%;
-   text-align: center;
+   right: 50px;
+   top: 270px;
  }
+
+ .text h1{
+  padding: 0px;
+  margin: 0px;
+ }
+
+ .text p{
+  float: right;
+ }
+
+ .text .findoutmore{
+  clear: both;
+  float: right;
+ }
+
+ .text .findoutmore{
+  margin: auto;
+  background-color: rgba(0, 0, 0, 0);
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px 40px;
+  border: 1px solid white;
+  }
  
  /* The dots/bullets/indicators */
  .dot {

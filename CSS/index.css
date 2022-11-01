@@ -167,19 +167,31 @@ img {
  }
 
 /* FOOTER */
-  footer{
-   text-align: center;
-   padding: 25px;
-   background-color: #101010;
-   color: white;
-   border-top: 1px white solid;
- }
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;  
+  padding: 25px;
+  background-color: #101010;
+  color: white;
+  border-top: 1px white solid;
+}
 
- footer a{
-   color: white;
-   text-decoration: none;
- }
-  
+footer a{
+ color: white;
+ text-decoration: none;
+}
+
+#bttop{
+background-color: #101010;
+font-family: 'Montserrat', sans-serif;
+font-size: 16px;
+color: white;
+margin: 10px;
+border-style: none;
+}
+
 
 
 

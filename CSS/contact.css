@@ -2,6 +2,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     transition: background-color .5s;
     margin:0;
+    background-color: #101010;
  }
 
 #wrapper {
@@ -144,8 +145,10 @@ input[type=number]::-webkit-inner-spin-button {
 
 /* BANNER */
 .banner{
-  background: url('../Images//showingnow.jpg') no-repeat;
-  height: 240px;
+  background: url('../Images/contactus.jpg') no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 180px;
   display: flex;
 }
 
@@ -157,76 +160,84 @@ margin: auto;
 width: fit-content;
 }
 
-/*FILTER*/
-.filter{
-  margin-top: 30px;
-  margin-left: 120px;
-  background-color: #101010;
-  color: white;
-  font-family: 'Montserrat', sans-serif;
+/* CONTENT */
+.content{
+  margin: auto;
+  margin-top: 10px;
+  width: 80%;
 }
 
-/* MOVIES */
-content{
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
-}
-
-.movie-list{
+.aboutus{
+  float: left;
   margin-top: 20px;
-  list-style: none;
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
+  margin-left: 20px;
 }
 
-.movies{
+.contactus{
+  float: right;
+  margin-top: 20px;
+  margin-right: 100px;
+}
+
+form td{
+  vertical-align: top;
+}
+
+input {
+  box-shadow: none;
+  border: 1px solid white;
   font-family: 'Montserrat', sans-serif;
-  width: 230px;
-  height: 406px;
-  text-align: center;
-  margin: 20px 50px;
-  justify-content: center;
+  padding: 5px;
 }
 
-.img{
-  width: 200px;
-  height: 300px;
-  object-fit: cover;
-  padding: 10px;
-  border-radius: 3%;
+textarea {
+  box-shadow: none;
+  border: 1px solid white;
+  font-family: 'Montserrat', sans-serif;
+  padding: 5px;
 }
 
-.movies a{
-  color: white;
-  text-decoration: none;
+#submit{
+    margin: 10px; 
+    font-family: 'Montserrat', sans-serif;
+    background-color:#0000; 
+    color: white;
+    border: 2px solid white; 
+    padding: 10px 30px; 
 }
+
+#submit:hover{
+  background-color: white;
+  color: #101010;
+}
+
 
 /* FOOTER */
-  footer{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    text-align: center;  
-    padding: 25px;
-    background-color: #101010;
-    color: white;
-    border-top: 1px white solid;
- }
-
- footer a{
-   color: white;
-   text-decoration: none;
- }
-
-#bttop{
+footer{
+  position: fixed;
+  bottom: 0;
+  width: 97%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;  
+  padding: 25px;
   background-color: #101010;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
   color: white;
-  margin: 10px;
-  border-style: none;
+  border-top: 1px white solid;
 }
 
+footer a{
+ color: white;
+ text-decoration: none;
+}
+
+#bttop{
+background-color: #101010;
+font-family: 'Montserrat', sans-serif;
+font-size: 16px;
+color: white;
+margin: 10px;
+border-style: none;
+}
 

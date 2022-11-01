@@ -3,19 +3,19 @@
 <head>
 	<title>MOVIES @ NTU</title>
 	<meta charset="utf-8">
-	<link rel="stylesheet" href="../CSS/cart.css">
-	<script src="../JS/cart.js"></script>
+	<link rel="stylesheet" href="../CSS/contact.css">
+	<script src="../JS/index.js"></script>
 </head>
 
 <body>
 	<div id="wrapper">
 		<header>
 			<div class="topnav">
-			  <a href="../HTML/index.html" >HOME</a>
-			  <a href="../HTML/movies.html" style="text-decoration:underline;">MOVIES</a>
+			  <a href="../HTML/index.html">HOME</a>
+			  <a href="../HTML/movies.html">MOVIES</a>
 			  <a class="homebutton" href="../HTML/index.html"><strong>MOVIES @ NTU</strong></a>
 			  <a href="../HTML/cinemas.html">CINEMAS</a>
-			  <a href="../HTML/contact.html">CONTACT</a>
+			  <a href="../HTML/contact.html" style="text-decoration:underline;">CONTACT</a>
 			  <div class="cart-icon" style="position:relative; right:-150px;">
 				<span onclick="openNav()"><img src="../Images/cart-icon.png" width="40px"></span>
 			  </div>
@@ -44,44 +44,44 @@
 				<a href="../HTML/cart.html"><input type="submit" value="Checkout now" name="submit_1" class="checkout"></a>
 			</div>
 		</header>
+		
+		<div class="banner">
+			<div class="banner-text">
+			  <h1>ABOUT MOVIES @ NTU</h1>
+			</div>
+		</div>
 
 		<section class="content">
-			<div class="title">
-				<h1>CHECK OUT</h1>
-				<hr>
+			<div class="aboutus">
+				<h4 style="text-decoration:underline;">About MOVIES @ NTU</h3>
+				<p style="inline-size: 450px;">Founded in 2019, MOVIES @ NTU is the leading movie theatre in NTU, offering the widest variety of new and upcoming movie releases with varied cinematic experiences.<br><br>Every week, hundreds of students come together to watch the latest films, engage in deep discussions, and bond over their love for films.</p>
 			</div>
 
-			<div class="booking-details">
-				<h4 style="text-decoration:underline;">Booking Details</h3>
-
-			</div>
-			<div class="contact-details">
-				<h4 style="text-decoration:underline;">Contact Details</h3>
-				<form id="checkoutForm" name="checkoutForm" action="cart-confirmation.php" method="post">
+			<div class="contactus">
+				<h4 style="text-decoration:underline;">Contact Us</h3>
+				<p>Something on your mind?<br>Let us know and we will do our best to assist you!</p>
+				<form id="contactForm" name="checkoutForm" action="contact-confirmation.php" method="post">
 					<table border="0">
 						<tr style="height:40px;">
-						  <td width="150">Full Name</td>
+						  <td width="150">*Full Name</td>
 						  <td width="300"><input type="text" name="name" id="name" placeholder="Enter name" onblur="myName()" required></td>
 						</tr>
 						<tr style="height:40px;">
-						  <td>E-mail:</td>
+						  <td>*E-mail:</td>
 						  <td><input type="email" name="email" id="email" placeholder="Enter Email" onblur="myEmail()" required></td>
 						</tr>
 						<tr style="height:40px;">
-						  <td>Mobile Number:</td>
-						  <td><input type="number" name="number" id="number" placeholder="Enter Mobile Number" onblur="myNumber()" required></td>
+						  <td>*Query:</td>
+							<td><textarea name="experience" id="experience" rows="5" cols="40" placeholder="Let us know what's on your mind!" required></textarea></td>
 						</tr>
 						<tr>
-						  <td colspan="2" align="center" style="height:120px;"><input type="submit" id="submit"value="Submit Order"></td>
+						  <td colspan="2" align="center" style="height:120px;"><input type="submit" id="submit"value="Submit"></td>
 						</tr>
 					</table>
 				</form>
 			</div>
-			
-	
 		</section>
-		
-		
+
 		<footer>
 			<a href="mailto:june@bhar.com">june@bhar.com</a>
 			<p>Movies @ NTU &copy; 2022</p>

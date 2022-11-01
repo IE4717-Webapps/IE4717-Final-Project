@@ -1,3 +1,12 @@
+<?php
+if (!isset($_SESSION))  session_start();
+if (!isset($_SESSION['name']) || !isset($_SESSION['email'])) {
+    header("Location: booking_service.php");
+    exit();
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,35 +56,17 @@
 
 		<section class="content">
 			<div class="title">
-				<h1>CHECK OUT</h1>
+				<h1>CANCELLATION</h1>
 				<hr>
 			</div>
 
 			<div class="booking-details">
-				<h4 style="text-decoration:underline;">Booking Details</h3>
+				<h4 style="text-decoration:underline;">Your Current Booking:</h3>
 
 			</div>
 			<div class="contact-details">
-				<h4 style="text-decoration:underline;">Contact Details</h3>
-				<form id="checkoutForm" name="checkoutForm" action="cart-confirmation.php" method="post">
-					<table border="0">
-						<tr style="height:40px;">
-						  <td width="150">Full Name</td>
-						  <td width="300"><input type="text" name="name" id="name" placeholder="Enter name" onblur="myName()" required></td>
-						</tr>
-						<tr style="height:40px;">
-						  <td>E-mail:</td>
-						  <td><input type="email" name="email" id="email" placeholder="Enter Email" onblur="myEmail()" required></td>
-						</tr>
-						<tr style="height:40px;">
-						  <td>Mobile Number:</td>
-						  <td><input type="number" name="number" id="number" placeholder="Enter Mobile Number" onblur="myNumber()" required></td>
-						</tr>
-						<tr>
-						  <td colspan="2" align="center" style="height:120px;"><input type="submit" id="submit"value="Submit Order"></td>
-						</tr>
-					</table>
-				</form>
+				<h4 style="text-decoration:underline;">Cancel Booking</h3>
+				<p style="inline-size: 450px;">Your booking has been cancelled. We look forward to seeing you again!</p>
 			</div>
 			
 	
@@ -91,5 +82,8 @@
 	</div>
 </body>
 </html>
+
+
+
 
 

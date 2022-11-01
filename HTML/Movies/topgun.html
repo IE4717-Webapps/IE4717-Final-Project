@@ -14,8 +14,8 @@
 	<div id="wrapper">
 		<header>
 			<div class="topnav">
-			  <a href="../../HTML/index.html" style="text-decoration:underline;">HOME</a>
-			  <a href="../../HTML/movies.html">MOVIES</a>
+			  <a href="../../HTML/index.html">HOME</a>
+			  <a href="../../HTML/movies.html" style="text-decoration:underline;">MOVIES</a>
 			  <a class="homebutton" href="../../HTML/index.html"><strong>MOVIES @ NTU</strong></a>
 			  <a href="../../HTML/cinemas.html">CINEMAS</a>
 			  <a href="../../HTML/contact.html">CONTACT</a>
@@ -26,7 +26,25 @@
 
 			<div id="myCart" class="cartnav">
 				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-				<a href="#">About</a>
+				<div class="cart-content">
+					<h2 style="margin-left:10px;">MY CART</h2>
+					<hr>
+					<div class="item">
+						<table id="cart-item">
+							<tr>
+								<td>Top Gun: Maverick</td>
+							</tr>
+							<tr>
+								<td>3 Nov, 2.30pm</td>
+							</tr>
+							<tr>
+								<td><input type="number" id="number" value="0" min="1" max="5"/></td>
+							</tr>
+						</table>
+						<hr width="80%">
+					</div>
+				</div>
+				<a href="../HTML/cart.html"><input type="submit" value="Checkout now" name="submit_1" class="checkout"></a>
 			</div>
 		</header> 
 
@@ -41,7 +59,7 @@
                 </div>
 				<div class="movie-details">
 					<h3>Details:</h3>
-					<table style="width:100%">
+					<table style="width:100%; width:600px;">
 						<tr>
 							<td style="width:40%">Running Time: 130 minutes</td>
 							<td>Cast: Tom Cruise, Jennifer Connelly, Miles Teller</td>

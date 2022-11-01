@@ -19,12 +19,3 @@ function BackToTop() {
 }
 
 bttop.addEventListener("click", scrollToTop)
-
-//BOOK TICKETS
-function mySelection(){
-    	var demovalue = document.getElementById("myselection").value;
-        alert(demovalue);
-        var demovalu
-
-        //demovalue.innerHTML = setAttribute("style","display: block;");
-    };

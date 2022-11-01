@@ -95,11 +95,45 @@ body {
   width: 80%;
 }
 
+.booking-details{
+  float: left;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.contact-details{
+  float: right;
+  margin-top: 20px;
+  margin-right: 100px;
+}
+
+input {
+  box-shadow: none;
+  border: 1px solid white;
+  font-family: 'Montserrat', sans-serif;
+  padding: 5px;
+}
+
+#submit{
+    margin: 10px; 
+    font-family: 'Montserrat', sans-serif;
+    background-color:#0000; 
+    color: white;
+    border: 2px solid white; 
+    padding: 10px 30px; 
+}
+
+#submit:hover{
+  background-color: white;
+  color: #101010;
+}
+
+
 /* FOOTER */
  footer{
   position: fixed;
   bottom: 0;
-  width: 100%;
+  width: 97%;
   display: flex;
   align-items: center;
   justify-content: space-between;

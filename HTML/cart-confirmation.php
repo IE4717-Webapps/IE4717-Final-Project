@@ -1,3 +1,12 @@
+<?php
+if (!isset($_SESSION))  session_start();
+if (!isset($_SESSION['name']) || !isset($_SESSION['email'])) {
+    header("Location: booking_service.php");
+    exit();
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,26 +47,10 @@
 
 			</div>
 			<div class="contact-details">
-				<h4 style="text-decoration:underline;">Contact Details</h3>
-				<form id="checkoutForm" name="checkoutForm" action="contact-details.php" method="post">
-					<table border="0">
-						<tr style="height:40px;">
-						  <td width="150">Full Name</td>
-						  <td width="300"><input type="text" name="name" id="name" placeholder="Enter name" onblur="myName()" required></td>
-						</tr>
-						<tr style="height:40px;">
-						  <td>E-mail:</td>
-						  <td><input type="email" name="email" id="email" placeholder="Enter Email" onblur="myEmail()" required></td>
-						</tr>
-						<tr style="height:40px;">
-						  <td>Mobile Number:</td>
-						  <td><input type="number" name="number" id="number" placeholder="Enter Mobile Number" onblur="myNumber()" required></td>
-						</tr>
-						<tr>
-						  <td colspan="2" align="center" style="height:120px;"><input type="submit" id="submit"value="Submit Order"></td>
-						</tr>
-					</table>
-				</form>
+				<p>Dear <?php echo $_SESSION['name'] ?>,</p>
+				<p>You have purchased:<br><?php echo $_SESSION['numberoftickets...'] ?> tickets for <?php echo $_SESSION['moive'] ?> at <?php echo $_SESSION['movietiming'] ?></p>
+				<p>A confirmation email has been sent to:<br><?php echo $_SESSION['email'] ?></p>
+				<p>We look forward to seeing you at MOVIES @ NTU!</p>
 			</div>
 			
 	

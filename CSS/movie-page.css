@@ -184,8 +184,8 @@ input[type='date']{
   align-items: center;
   font-family: 'Montserrat', sans-serif;
   color: white;
-}
 
+}
 input[type='date']::-webkit-calendar-picker-indicator{
   filter: invert(100%);
 }
@@ -205,7 +205,14 @@ input[type='date']::-webkit-datetime-edit{
   background-color: #0000;
   font-family: "Montserrat", sans-serif;
 }
-
+.showtimes-shows-selection:hover{
+  background: white;
+  color: black;
+}
+.showtimes-shows-selection::selection{
+  background: rgb(204, 201, 201);
+  color: black;
+}
 
 /* FOOTER */
   footer{

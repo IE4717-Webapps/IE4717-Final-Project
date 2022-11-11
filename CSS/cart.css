@@ -50,99 +50,6 @@ body {
   text-decoration: none;
 }
 
-
-/* CART */
-.cartnav {
-  height: 100%;
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  right: 0;
-  background-color: #161616;
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px;
-  transition: 0.5s;
-}
-
-.cartnav a {
-padding: 8px 8px 8px 32px;
-text-decoration: none;
-font-size: 25px;
-color: #818181;
-display: block;
-transition: 0.3s;
-}
-
-.cartnav a:hover {
-color: #f1f1f1;
-}
-
-.cartnav .closebtn {
-position: absolute;
-top: 0;
-right: 25px;
-font-size: 36px;
-margin-left: 50px;
-}
-
-#main {
-transition: margin-right .5s;
-padding: 20px;
-}
-
-.cart-content{
-width: 90%;
-margin: auto;
-}
-
-#cart-item{
-margin: auto;
-}
-
-#cart-item td{
-height: 30px;
-}
-
-.cartnav .checkout{
-margin: auto;
-position: fixed;
-bottom: 100px;
-background-color: white;
-color: #101010;
-font-family: 'Montserrat', sans-serif;
-padding: 15px 100px;
-font-size: 0.7em;
-font-weight: bold;
-}
-
-input[type=number] {
-/*for absolutely positioning spinners*/
-position: relative; 
-padding: 5px;
-padding-right: 25px;
-}
-
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
-opacity: 1;
-}
-
-input[type=number]::-webkit-outer-spin-button, 
-input[type=number]::-webkit-inner-spin-button {
-width: 25px;
-position: absolute;
-top: 0;
-right: 0;
-height: 100%;
-}
-
-#cart-item #number{
-background-color: #101010;
-color: white;
-border: 1px solid white;
-}
-
 /* TITLE */
 .content{
   margin: auto;
@@ -182,7 +89,6 @@ input {
   background-color: white;
   color: #101010;
 }
-
 
 /* FOOTER */
  footer{
